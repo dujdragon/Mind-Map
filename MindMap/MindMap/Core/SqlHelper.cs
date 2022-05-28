@@ -9,9 +9,9 @@ namespace MindMap.Core
 {
     public class SqlHelper
     {
-        public string ConnectionString { get; set; } = "user id = sa; password = HA0djl0ha; initial catalog = MindMap   ; data source = 127.0.0.1; Connect Timeout = 30;TrustServerCertificate=True;";
+        public static string ConnectionString { get; set; } = "user id = sa; password = HA0djl0ha; initial catalog = MindMap   ; data source = 127.0.0.1; Connect Timeout = 30;TrustServerCertificate=True;";
         
-        public DataTable ExecuteTable(string cmdText, params SqlParameter[] sqlParameters)
+        public static DataTable ExecuteTable(string cmdText, params SqlParameter[] sqlParameters)
         {
             using SqlConnection conn = new SqlConnection(ConnectionString);
             conn.Open();
@@ -23,7 +23,7 @@ namespace MindMap.Core
             return ds.Tables[0];
         }
 
-        public int ExecuteNonQuery(string cmdText, params SqlParameter[] sqlParameters)
+        public static int ExecuteNonQuery(string cmdText, params SqlParameter[] sqlParameters)
         {
             using SqlConnection conn = new SqlConnection(ConnectionString);
             conn.Open();

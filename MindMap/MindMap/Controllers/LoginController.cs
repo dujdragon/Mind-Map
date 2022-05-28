@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using MindMap.Core;
+using MindMap.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -39,11 +40,20 @@ namespace MindMap.Controllers
         }
         // 修改密码
         [HttpPut]
-        public string Update(string username, string pwd)
+        public string Update(string username, string pwd, string CreateTime)
         {
             SqlHelper sqlHelper = new SqlHelper();
-            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@username", username), new SqlParameter("@pwd", pwd) };
-            sqlHelper.ExecuteNonQuery("Update UsersLogin Set pwd = @pwd where username = @username", sqlParameters);
+            DataTable res = sqlHelper.ExecuteTable("Select * from UsersLogin where username=@username", new SqlParameter("@username", username));
+            if (res.Rows.Count > 0)
+            {
+                User user = new User();
+                user.Id = (int)res.Rows[0]["Id"];
+                user.Username = username??(string)res.Rows[0]["username"];
+                user.Password = pwd??(string)res.Rows[0]["pwd"];
+
+                sqlHelper.ExecuteNonQuery("Update UsersLogin Set pwd = @pwd where username = @username", new SqlParameter("@username", user.Username), new SqlParameter("@pwd", user.Password));
+            }
+           
             return "successfully update password!";
         }
         // 注销账户
