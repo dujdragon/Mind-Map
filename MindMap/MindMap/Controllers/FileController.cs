@@ -39,38 +39,50 @@ namespace MindMap.Controllers
             DataTable data = sqlHelper.ExecuteTable("Select * from UsersFiles where username=@username and filepath=@filepath and filename=@filename", sqlParameters);
 
 
-            return data.Rows[0][filepath].ToString() + '\n' + data.Rows[0][filename].ToString();
+            return data.Rows[0]["filepath"].ToString() + '\n' + data.Rows[0]["filename"].ToString();
         }
-         //创建文件
-        //[HttpPost]
-        //public string CreateFileObj(string username, string filepath, string filename, int type)
-        //{
-        //    SqlHelper sqlHelper = new SqlHelper();
-        //    SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter(@username, username), new SqlParameter(@filepath, filepath), new SqlParameter(@filename, filename) , new SqlParameter(@type, type)};
-        //    DataTable res = sqlHelper.ExecuteTable("insert into UsersFiles(username, filename, filepath, type) values(@username, @filename, @filepath, @type)", sqlParameters);
-        //    if (res.Rows.Count != 0) return "username already exists!";
-        //    sqlParameters = new SqlParameter[] { new SqlParameter(@username, username), new SqlParameter("@pwd", pwd) };
-        //    sqlHelper.ExecuteNonQuery("insert into UsersLogin(username, pwd) values(@username, @pwd)", sqlParameters);
-        //    return "successfully register!";
-        //}
-        //// 修改密码
-        //[HttpPut]
-        //public string Update(string username, string pwd)
-        //{
-        //    SqlHelper sqlHelper = new SqlHelper();
-        //    SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter(@username, username), new SqlParameter(@pwd, pwd) };
-        //    sqlHelper.ExecuteNonQuery(Update UsersLogin Set pwd = @pwd where username = @username, sqlParameters);
-        //    return successfully update password!;
-        //}
-        // 注销账户
-        //[HttpDelete]
-        //public string Remove(string username)
-        //{
-        //    SqlHelper sqlHelper = new SqlHelper();
-        //    SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter(@username, username) };
-        //    sqlHelper.ExecuteNonQuery(delete from UsersLogin where username=@username, sqlParameters);
-        //    return successfully logout!;
-        //}
+        [HttpPost]
+        /// <summary>
+        /// 创建文件 只支持文件或文件夹的插入，不支持相同名称的更正
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="filepath"></param>
+        /// <param name="filename"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public string InsertFileObj(string username, string filepath, string filename, int type)
+        {   
+            SqlHelper sqlHelper = new SqlHelper();
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@username", username), new SqlParameter("@filepath", filepath), new SqlParameter("@filename", filename), new SqlParameter("@type", type) };
+            sqlHelper.ExecuteNonQuery("insert into UsersFiles(username, filename, filepath, type) values(@username, @filename, @filepath, @type)", sqlParameters);
+            return "Successfully Insert fileObj!";
+        }
+
+        /// <summary>
+        /// 更新文件名
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="filepath"></param>
+        /// <param name="filename"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        [HttpPut]
+        public string UpdateFileName(string username, string filepath, string filename, string newName)
+        {
+            SqlHelper sqlHelper = new SqlHelper();
+            SqlParameter[] sqlParametersToFindId = new SqlParameter[] { new SqlParameter("@username", username), new SqlParameter("@filepath", filepath), new SqlParameter("@filename", filename), new SqlParameter("@newName", newName) };
+            sqlHelper.ExecuteNonQuery("Update UsersFiles Set filename=@newName where username=@username and filepath=@filepath and filename=@filename and type='0'", sqlParametersToFindId);
+            return "successfully update file name";
+        }
+        
+       [HttpDelete]
+        public string DeleteFile(string username, string filepath, string filename)
+        {
+            SqlHelper sqlHelper = new SqlHelper();
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@username", username), new SqlParameter("@filepath", filepath), new SqlParameter("@filename", filename) };
+            sqlHelper.ExecuteNonQuery("delete from UsersFiles where username = @username and filepath=@filepath and filename=@filename", sqlParameters);
+            return "successfully delete file!";
+        }
     }
 
     public class FileObj
