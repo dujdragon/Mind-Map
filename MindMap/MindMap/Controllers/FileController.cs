@@ -3,9 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using MindMapApi.Bll;
 using MindMapApi.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -81,6 +84,12 @@ namespace MindMapApi.Controllers
                 filesBll.Delete(file);
             }
             return "successfully delete user's all files!";
+        }
+
+        [HttpGet]
+        public JObject GetJson(string json)
+        {
+            return JObject.Parse(json);
         }
     }
 }

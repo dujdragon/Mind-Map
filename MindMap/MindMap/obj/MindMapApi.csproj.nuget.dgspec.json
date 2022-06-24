@@ -1,19 +1,19 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Mind-Map-DragonDJ\\MindMap\\MindMap\\MindMapApi.csproj": {}
+    "E:\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj": {}
   },
   "projects": {
-    "E:\\Mind-Map-DragonDJ\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj": {
+    "E:\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj": {
       "restore": {
-        "projectUniqueName": "E:\\Mind-Map-DragonDJ\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj",
+        "projectUniqueName": "E:\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj",
         "projectName": "MindMapApi.Bll",
-        "projectPath": "E:\\Mind-Map-DragonDJ\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj",
+        "projectPath": "E:\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "E:\\Mind-Map-DragonDJ\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj": {
-                "projectPath": "E:\\Mind-Map-DragonDJ\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj"
+              "E:\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj": {
+                "projectPath": "E:\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj"
               }
             }
           }
@@ -23,11 +23,11 @@
         "net472": {}
       }
     },
-    "E:\\Mind-Map-DragonDJ\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj": {
+    "E:\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj": {
       "restore": {
-        "projectUniqueName": "E:\\Mind-Map-DragonDJ\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj",
+        "projectUniqueName": "E:\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj",
         "projectName": "MindMapApi.Models",
-        "projectPath": "E:\\Mind-Map-DragonDJ\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj",
+        "projectPath": "E:\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}
@@ -38,14 +38,14 @@
         "net472": {}
       }
     },
-    "E:\\Mind-Map-DragonDJ\\MindMap\\MindMap\\MindMapApi.csproj": {
+    "E:\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Mind-Map-DragonDJ\\MindMap\\MindMap\\MindMapApi.csproj",
+        "projectUniqueName": "E:\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj",
         "projectName": "MindMapApi",
-        "projectPath": "E:\\Mind-Map-DragonDJ\\MindMap\\MindMap\\MindMapApi.csproj",
+        "projectPath": "E:\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj",
         "packagesPath": "C:\\Users\\20205\\.nuget\\packages\\",
-        "outputPath": "E:\\Mind-Map-DragonDJ\\MindMap\\MindMap\\obj\\",
+        "outputPath": "E:\\Mind-Map\\MindMap\\MindMap\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -66,11 +66,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Mind-Map-DragonDJ\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj": {
-                "projectPath": "E:\\Mind-Map-DragonDJ\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj"
+              "E:\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj": {
+                "projectPath": "E:\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj"
               },
-              "E:\\Mind-Map-DragonDJ\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj": {
-                "projectPath": "E:\\Mind-Map-DragonDJ\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj"
+              "E:\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj": {
+                "projectPath": "E:\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj"
               }
             }
           }
@@ -100,6 +100,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
