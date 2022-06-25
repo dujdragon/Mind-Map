@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+
+    <div class="register-form">
+        <h1>Register</h1>
+
+        <div class="txtb">
+            <input type="text" id="usn">
+            <span data-placeholder="Username"></span>
+        </div>
+
+        <div class="txtb">
+            <input type="password" id="pwd">
+            <span data-placeholder="Password"></span>
+        </div>
+        <div class="txtb">
+            <input type="password" id="re_pwd">
+            <span data-placeholder="Password"></span>
+        </div>
+
+        <input type="submit" class="logbtn" value="Register" id="register">
+        <div class="bottom-text">
+            <div id="msg"></div>
+            <a href="index.html">返回</a>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        $(".txtb input").on("focus", function () {
+            $(this).addClass("focus");
+        });
+
+        $(".txtb input").on("blur", function () {
+            if ($(this).val() == "")
+                $(this).removeClass("focus");
+        });
+    </script>
+
+</body>
+</html>
+
+<script language="javascript" type="text/javascript">
+    jQuery(document).ready(function () {
+        $(document).on("click", "#register", function (e) {
+            var pwd = $('#pwd').val();
+            var re_pwd = $("#re_pwd").val();
+            var usn = $('#usn').val();
+
+            if (pwd != re_pwd) {
+                $('#msg').text("两次密码不匹配！");
+            } else {
+                $.ajax({
+                    type: "post",
+                    url: "/Login/Register",
+                    contentType: 'application/json;charset=UTF-8',
+                    dataType: "text",
+                    data: JSON.stringify({"username":usn, "password":pwd}),
+                    success: function (data, status) {
+                        if (status == "success") {
+                            if (data == "existed") {
+                                $('#msg').text("用户名已经存在！");
+                            } else {
+                                $('#msg').text("注册成功！");
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>

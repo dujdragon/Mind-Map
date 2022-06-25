@@ -1,19 +1,19 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj": {}
+    "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj": {}
   },
   "projects": {
-    "E:\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj": {
+    "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj": {
       "restore": {
-        "projectUniqueName": "E:\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj",
+        "projectUniqueName": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj",
         "projectName": "MindMapApi.Bll",
-        "projectPath": "E:\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj",
+        "projectPath": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "E:\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj": {
-                "projectPath": "E:\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj"
+              "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj": {
+                "projectPath": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj"
               }
             }
           }
@@ -23,11 +23,11 @@
         "net472": {}
       }
     },
-    "E:\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj": {
+    "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj": {
       "restore": {
-        "projectUniqueName": "E:\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj",
+        "projectUniqueName": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj",
         "projectName": "MindMapApi.Models",
-        "projectPath": "E:\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj",
+        "projectPath": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}
@@ -38,21 +38,17 @@
         "net472": {}
       }
     },
-    "E:\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj": {
+    "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj",
+        "projectUniqueName": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj",
         "projectName": "MindMapApi",
-        "projectPath": "E:\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj",
-        "packagesPath": "C:\\Users\\20205\\.nuget\\packages\\",
-        "outputPath": "E:\\Mind-Map\\MindMap\\MindMap\\obj\\",
+        "projectPath": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj",
+        "packagesPath": "C:\\Users\\Dragon_DJ\\.nuget\\packages\\",
+        "outputPath": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\20205\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Dragon_DJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -66,11 +62,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj": {
-                "projectPath": "E:\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj"
+              "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj": {
+                "projectPath": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj"
               },
-              "E:\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj": {
-                "projectPath": "E:\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj"
+              "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj": {
+                "projectPath": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj"
               }
             }
           }
@@ -88,6 +84,10 @@
             "EntityFramework": {
               "target": "Package",
               "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.6, )"
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
@@ -128,7 +128,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

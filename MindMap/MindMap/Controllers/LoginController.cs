@@ -3,10 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using MindMapApi.Bll;
 using MindMapApi.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace MindMapApi.Controllers
@@ -32,34 +35,38 @@ namespace MindMapApi.Controllers
             UsersLogin user = usersBll.Get(username);
             if(user == null)
             {
-                return "user doesn't exist!";
+                return "NE";    // user not exist
             }
             if (user.pwd != pwd)
             {
-                return "wrong username or password!";
+                return "wrong";  // wrong username or password
             }
             LoginUserId = user.id;
-            return "successfully login!";
+            return "success";
         }
         // 用户注册
         [HttpPost]
-        public string Register(string username, string pwd)
+        public string Register(dynamic Json)
         {
+            //string jsonStr = JsonConvert.SerializeObject(jsonObject);
+            //var jsonParams = JsonConvert.DeserializeObject<dynamic>(jsonStr);
+            string username = Json.username;
+            string password = Json.password;
             UsersLogin user = usersBll.Get(username);
             if (user != null)
             {
-                return "username already exists!";
+                return "existed";
             }
             usersBll.Insert(new UsersLogin
             {
                 username = username,
-                pwd = pwd,
+                pwd = password,
                 createdate = DateTime.Now
             });
-            return "successfully register!";
+            return "success";
         }
 
-        //修改用户名:修改当前登录用户的用户名
+        // 修改用户名:修改当前登录用户的用户名
         [HttpPut]
         public string UpdataUsername(string newUsername)
         {
@@ -84,7 +91,7 @@ namespace MindMapApi.Controllers
             return "successfully update password!";
         }
 
-        //退出登录：将LoginUserId设为-1
+        // 退出登录：将LoginUserId设为-1
         [HttpPut]
         public string Logout()
         {
