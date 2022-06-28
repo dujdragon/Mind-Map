@@ -4,12 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f4fdbcc34b194b4e9b549a7f8ac58f7a" Name="Diagram1">
-        <EntityTypeShape EntityType="MindMapModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MindMapModel.UsersFiles" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MindMapModel.UsersLogin" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <AssociationConnector Association="MindMapModel.FK_UsersFiles_UsersLogin" />
-        <AssociationConnector Association="MindMapModel.FK_UsersLogin_UsersFiles" />
+      <Diagram DiagramId="f74240575a0b4132bb1bc8f5fc71620e" Name="Diagram1">
+        <EntityTypeShape EntityType="MindMapModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MindMapModel.UsersFiles" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MindMapModel.UsersLogin" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="MindMapModel.FK_UsersLogin_UsersFiles" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

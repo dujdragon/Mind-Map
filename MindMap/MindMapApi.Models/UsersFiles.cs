@@ -17,7 +17,7 @@ namespace MindMapApi.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public UsersFiles()
         {
-            this.UsersLogin1 = new HashSet<UsersLogin>();
+            this.UsersLogin = new HashSet<UsersLogin>();
         }
     
         public long id { get; set; }
@@ -26,9 +26,10 @@ namespace MindMapApi.Models
         public string filepath { get; set; }
         public bool type { get; set; }
         public System.DateTime createdate { get; set; }
+        public bool is_shared { get; set; }
+        public string tag { get; set; }
     
-        public virtual UsersLogin UsersLogin { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UsersLogin> UsersLogin1 { get; set; }
+        public virtual ICollection<UsersLogin> UsersLogin { get; set; }
     }
 }

@@ -20,49 +20,24 @@
     <Property Name="filepath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="type" Type="Boolean" Nullable="false" />
     <Property Name="createdate" Type="DateTime" Nullable="false" Precision="3" />
-    <NavigationProperty Name="UsersLogin" Relationship="MindMapModel.FK_UsersFiles_UsersLogin" FromRole="UsersFiles" ToRole="UsersLogin" />
-    <NavigationProperty Name="UsersLogin1" Relationship="MindMapModel.FK_UsersLogin_UsersFiles" FromRole="UsersFiles" ToRole="UsersLogin" />
+    <Property Name="is_shared" Type="Boolean" Nullable="false" />
+    <Property Name="tag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="UsersLogin" Relationship="Self.FK_UsersLogin_UsersFiles" FromRole="UsersFiles" ToRole="UsersLogin" />
   </EntityType>
   <EntityType Name="UsersLogin">
     <Key>
-      <PropertyRef Name="username" />
+      <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="pwd" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="createdate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="files" Type="Int64" />
-    <NavigationProperty Name="UsersFiles" Relationship="MindMapModel.FK_UsersFiles_UsersLogin" FromRole="UsersLogin" ToRole="UsersFiles" />
-    <NavigationProperty Name="UsersFiles1" Relationship="MindMapModel.FK_UsersLogin_UsersFiles" FromRole="UsersLogin" ToRole="UsersFiles" />
+    <NavigationProperty Name="UsersFiles" Relationship="Self.FK_UsersLogin_UsersFiles" FromRole="UsersLogin" ToRole="UsersFiles" />
   </EntityType>
-  <EntityContainer Name="MindMapEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-    <EntitySet Name="UsersFiles" EntityType="Self.UsersFiles" />
-    <EntitySet Name="UsersLogin" EntityType="Self.UsersLogin" />
-    <AssociationSet Name="FK_UsersFiles_UsersLogin" Association="MindMapModel.FK_UsersFiles_UsersLogin">
-      <End Role="UsersLogin" EntitySet="UsersLogin" />
-      <End Role="UsersFiles" EntitySet="UsersFiles" />
-    </AssociationSet>
-    <AssociationSet Name="FK_UsersLogin_UsersFiles" Association="MindMapModel.FK_UsersLogin_UsersFiles">
-      <End Role="UsersFiles" EntitySet="UsersFiles" />
-      <End Role="UsersLogin" EntitySet="UsersLogin" />
-    </AssociationSet>
-  </EntityContainer>
-  <Association Name="FK_UsersFiles_UsersLogin">
-    <End Type="MindMapModel.UsersLogin" Role="UsersLogin" Multiplicity="1" />
-    <End Type="MindMapModel.UsersFiles" Role="UsersFiles" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="UsersLogin">
-        <PropertyRef Name="username" />
-      </Principal>
-      <Dependent Role="UsersFiles">
-        <PropertyRef Name="username" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_UsersLogin_UsersFiles">
-    <End Type="MindMapModel.UsersFiles" Role="UsersFiles" Multiplicity="0..1" />
-    <End Type="MindMapModel.UsersLogin" Role="UsersLogin" Multiplicity="*" />
+    <End Role="UsersFiles" Type="Self.UsersFiles" Multiplicity="0..1" />
+    <End Role="UsersLogin" Type="Self.UsersLogin" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="UsersFiles">
         <PropertyRef Name="id" />
@@ -72,4 +47,13 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityContainer Name="MindMapEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="UsersFiles" EntityType="Self.UsersFiles" />
+    <EntitySet Name="UsersLogin" EntityType="Self.UsersLogin" />
+    <AssociationSet Name="FK_UsersLogin_UsersFiles" Association="Self.FK_UsersLogin_UsersFiles">
+      <End Role="UsersFiles" EntitySet="UsersFiles" />
+      <End Role="UsersLogin" EntitySet="UsersLogin" />
+    </AssociationSet>
+  </EntityContainer>
 </Schema>

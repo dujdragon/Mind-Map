@@ -4,7 +4,7 @@
 //
 //     手动更改此文件可能导致应用程序出现意外的行为。
 //     如果重新生成代码，将覆盖对此文件的手动更改。
-// </auto-generated> 
+// </auto-generated>
 //------------------------------------------------------------------------------
 
 namespace MindMapApi.Models
@@ -14,20 +14,12 @@ namespace MindMapApi.Models
     
     public partial class UsersLogin
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public UsersLogin()
-        {
-            this.UsersFiles = new HashSet<UsersFiles>();
-        }
-    
         public int id { get; set; }
         public string username { get; set; }
         public string pwd { get; set; }
         public System.DateTime createdate { get; set; }
         public Nullable<long> files { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UsersFiles> UsersFiles { get; set; }
-        public virtual UsersFiles UsersFiles1 { get; set; }
+        public virtual UsersFiles UsersFiles { get; set; }
     }
 }

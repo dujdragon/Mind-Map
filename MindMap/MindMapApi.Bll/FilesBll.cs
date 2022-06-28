@@ -57,5 +57,10 @@ namespace MindMapApi.Bll
         {
             return db.UsersFiles.Where(file => file.username == username && file.filename == filename && file.filepath == path).FirstOrDefault();
         }
+
+        public List<UsersFiles> GetSharedFiles()
+        {
+            return db.UsersFiles.Where(files => files.is_shared == true).ToList();
+        }
     }
 }

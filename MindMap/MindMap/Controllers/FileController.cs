@@ -47,14 +47,15 @@ namespace MindMapApi.Controllers
             return filesBll.GetAllByUserName(userName);
         }
 
-        // 创建新文件，同目录下文件名不允许相同
+        // 创建新文件，同目录下文件名不允许相同,文件默认不可共享
         [HttpPost]
-        public string CreateFile(dynamic Json) // 1是文件，0是文件夹 
+        public string CreateFile(dynamic Json) // 0文件，1文件夹 
         {
             string username = Json.username;
             string filepath = Json.filepath;
             string filename = Json.filename;
             bool type = Json.type;
+            string tag = Json.tag;
             // string username, string filepath, string filename, bool type
             if (filesBll.GetByFileNameAndPath(filename,filepath) != null)
             {
@@ -66,8 +67,9 @@ namespace MindMapApi.Controllers
                 filepath = filepath,
                 filename = filename,
                 type = type,
+                tag = tag,
                 createdate = DateTime.Now
-            });
+            }) ;
             return "success";
         }
 
@@ -116,6 +118,33 @@ namespace MindMapApi.Controllers
         public JObject GetJson(string json)
         {
             return JObject.Parse(json);
+        }
+
+        //修改tag
+        [HttpPut]
+        public string UpdateTag(int id, string newTag)
+        {
+            UsersFiles file = filesBll.Get(id);
+            file.tag = newTag;
+            filesBll.Update(file);
+            return "successfully update tag!";
+        }
+
+        //设置文件共享状态（文件默认不可共享）
+        [HttpPut]
+        public string ShareEnable(int id, bool is_shared)
+        {
+            UsersFiles file = filesBll.Get(id);
+            file.is_shared = is_shared;
+            filesBll.Update(file);
+            return "success!";
+        }
+
+        //显示所有可共享文件
+        [HttpGet]
+        public List<UsersFiles> GetAllSharedFiles()
+        {
+            return filesBll.GetSharedFiles();
         }
     }
 }

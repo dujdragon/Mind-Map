@@ -21,17 +21,19 @@
           <ScalarProperty Name="filepath" ColumnName="filepath" />
           <ScalarProperty Name="type" ColumnName="type" />
           <ScalarProperty Name="createdate" ColumnName="createdate" />
+          <ScalarProperty Name="is_shared" ColumnName="is_shared" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UsersLogin">
       <EntityTypeMapping TypeName="MindMapModel.UsersLogin">
         <MappingFragment StoreEntitySet="UsersLogin">
-          <ScalarProperty Name="files" ColumnName="files" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="username" ColumnName="username" />
           <ScalarProperty Name="pwd" ColumnName="pwd" />
           <ScalarProperty Name="createdate" ColumnName="createdate" />
+          <ScalarProperty Name="files" ColumnName="files" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

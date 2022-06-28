@@ -17,5 +17,6 @@ namespace MindMapApi.Bll
         List<T> GetByFileName(string filename);
         T GetByFileNameAndPath(string fileName, string path);
         T Get(string username, string filename, string path);
+        List<T> GetSharedFiles();
     }
 }

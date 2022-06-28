@@ -20,10 +20,12 @@
     <Property Name="filepath" Type="nvarchar" MaxLength="500" Nullable="false" />
     <Property Name="type" Type="bit" Nullable="false" />
     <Property Name="createdate" Type="datetime" Nullable="false" />
+    <Property Name="is_shared" Type="bit" Nullable="false" />
+    <Property Name="tag" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="UsersLogin">
     <Key>
-      <PropertyRef Name="username" />
+      <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -31,22 +33,8 @@
     <Property Name="createdate" Type="datetime" Nullable="false" />
     <Property Name="files" Type="bigint" />
   </EntityType>
-  <Association Name="FK_UsersFiles_UsersLogin">
-    <End Role="UsersLogin" Type="Self.UsersLogin" Multiplicity="1" />
-    <End Role="UsersFiles" Type="Self.UsersFiles" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="UsersLogin">
-        <PropertyRef Name="username" />
-      </Principal>
-      <Dependent Role="UsersFiles">
-        <PropertyRef Name="username" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_UsersLogin_UsersFiles">
-    <End Role="UsersFiles" Type="Self.UsersFiles" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="UsersFiles" Type="Self.UsersFiles" Multiplicity="0..1" />
     <End Role="UsersLogin" Type="Self.UsersLogin" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="UsersFiles">
@@ -61,10 +49,6 @@
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UsersFiles" EntityType="Self.UsersFiles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UsersLogin" EntityType="Self.UsersLogin" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_UsersFiles_UsersLogin" Association="Self.FK_UsersFiles_UsersLogin">
-      <End Role="UsersLogin" EntitySet="UsersLogin" />
-      <End Role="UsersFiles" EntitySet="UsersFiles" />
-    </AssociationSet>
     <AssociationSet Name="FK_UsersLogin_UsersFiles" Association="Self.FK_UsersLogin_UsersFiles">
       <End Role="UsersFiles" EntitySet="UsersFiles" />
       <End Role="UsersLogin" EntitySet="UsersLogin" />

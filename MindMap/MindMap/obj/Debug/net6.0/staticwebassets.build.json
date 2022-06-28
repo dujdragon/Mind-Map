@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MwXQc+VPWjHnXYiI7K5u0GxcRkw7gEc2oOssFx20ZTc=",
+  "Hash": "lRIDQLJc/hhNu0uTgCh694S2JpNjTKnYUdJIc00TjOo=",
   "Source": "MindMapApi",
   "BasePath": "_content/MindMapApi",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MindMapApi\\wwwroot",
       "Source": "MindMapApi",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\2_features.html",
+      "Identity": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\2_features.html",
       "SourceId": "MindMapApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "RelativePath": "2_features.html",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\2_features.html"
     },
     {
-      "Identity": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\css\\jquery-ui.structure.css",
+      "Identity": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\css\\jquery-ui.structure.css",
       "SourceId": "MindMapApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "RelativePath": "css/jquery-ui.structure.css",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\css\\jquery-ui.structure.css"
     },
     {
-      "Identity": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\css\\jsmind.css",
+      "Identity": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\css\\jsmind.css",
       "SourceId": "MindMapApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "RelativePath": "css/jsmind.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\jsmind.css"
     },
     {
-      "Identity": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\css\\login.css",
+      "Identity": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\css\\login.css",
       "SourceId": "MindMapApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "RelativePath": "css/login.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
-      "Identity": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\css\\struct.css",
+      "Identity": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\css\\struct.css",
       "SourceId": "MindMapApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "RelativePath": "css/struct.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\struct.css"
     },
     {
-      "Identity": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\img\\left_arrow.png",
+      "Identity": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\img\\left_arrow.png",
       "SourceId": "MindMapApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "RelativePath": "img/left_arrow.png",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\img\\left_arrow.png"
     },
     {
-      "Identity": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\img\\right_arrow.png",
+      "Identity": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\img\\right_arrow.png",
       "SourceId": "MindMapApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "RelativePath": "img/right_arrow.png",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\img\\right_arrow.png"
     },
     {
-      "Identity": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\index.html",
+      "Identity": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\index.html",
       "SourceId": "MindMapApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\js\\file_control.js",
+      "Identity": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\js\\file_control.js",
       "SourceId": "MindMapApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "RelativePath": "js/file_control.js",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\js\\file_control.js"
     },
     {
-      "Identity": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\js\\jquery-ui.min.js",
+      "Identity": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\js\\jquery-ui.min.js",
       "SourceId": "MindMapApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "RelativePath": "js/jquery-ui.min.js",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery-ui.min.js"
     },
     {
-      "Identity": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\js\\jsmind.draggable.js",
+      "Identity": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\js\\jsmind.draggable.js",
       "SourceId": "MindMapApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "RelativePath": "js/jsmind.draggable.js",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jsmind.draggable.js"
     },
     {
-      "Identity": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\js\\jsmind.js",
+      "Identity": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\js\\jsmind.js",
       "SourceId": "MindMapApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "RelativePath": "js/jsmind.js",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jsmind.js"
     },
     {
-      "Identity": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\js\\jsmind.screenshot.js",
+      "Identity": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\js\\jsmind.screenshot.js",
       "SourceId": "MindMapApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "RelativePath": "js/jsmind.screenshot.js",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jsmind.screenshot.js"
     },
     {
-      "Identity": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\mindmap.html",
+      "Identity": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\mindmap.html",
       "SourceId": "MindMapApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "RelativePath": "mindmap.html",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\mindmap.html"
     },
     {
-      "Identity": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\register.html",
+      "Identity": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\register.html",
       "SourceId": "MindMapApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRO\\dotNet\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
+      "ContentRoot": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\wwwroot\\",
       "BasePath": "_content/MindMapApi",
       "RelativePath": "register.html",
       "AssetKind": "All",
