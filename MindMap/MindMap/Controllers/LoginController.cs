@@ -8,6 +8,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -63,6 +64,9 @@ namespace MindMapApi.Controllers
                 pwd = password,
                 createdate = DateTime.Now
             });
+            string sPath = "D:\\Data\\" + username;
+            if (!Directory.Exists(sPath))
+                Directory.CreateDirectory(sPath);//创建路径
             return "success";
         }
 

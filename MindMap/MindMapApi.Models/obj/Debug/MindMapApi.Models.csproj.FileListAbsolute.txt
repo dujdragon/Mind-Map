@@ -40,3 +40,17 @@ E:\Mind-Map\Mind-Map\MindMap\MindMapApi.Models\obj\Debug\MindMapApi.Models.cspro
 E:\Mind-Map\Mind-Map\MindMap\MindMapApi.Models\obj\Debug\MindMapApi.Models.csproj.CopyComplete
 E:\Mind-Map\Mind-Map\MindMap\MindMapApi.Models\obj\Debug\MindMapApi.Models.dll
 E:\Mind-Map\Mind-Map\MindMap\MindMapApi.Models\obj\Debug\MindMapApi.Models.pdb
+C:\Users\Dragon_DJ\Desktop\MindMap_V1_final\Mind-Map\MindMap\MindMapApi.Models\bin\Debug\MindMapApi.Models.dll.config
+C:\Users\Dragon_DJ\Desktop\MindMap_V1_final\Mind-Map\MindMap\MindMapApi.Models\bin\Debug\MindMapApi.Models.dll
+C:\Users\Dragon_DJ\Desktop\MindMap_V1_final\Mind-Map\MindMap\MindMapApi.Models\bin\Debug\MindMapApi.Models.pdb
+C:\Users\Dragon_DJ\Desktop\MindMap_V1_final\Mind-Map\MindMap\MindMapApi.Models\bin\Debug\EntityFramework.dll
+C:\Users\Dragon_DJ\Desktop\MindMap_V1_final\Mind-Map\MindMap\MindMapApi.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dragon_DJ\Desktop\MindMap_V1_final\Mind-Map\MindMap\MindMapApi.Models\bin\Debug\EntityFramework.xml
+C:\Users\Dragon_DJ\Desktop\MindMap_V1_final\Mind-Map\MindMap\MindMapApi.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dragon_DJ\Desktop\MindMap_V1_final\Mind-Map\MindMap\MindMapApi.Models\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\Dragon_DJ\Desktop\MindMap_V1_final\Mind-Map\MindMap\MindMapApi.Models\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\Dragon_DJ\Desktop\MindMap_V1_final\Mind-Map\MindMap\MindMapApi.Models\obj\Debug\MindMapApi.Models.csproj.AssemblyReference.cache
+C:\Users\Dragon_DJ\Desktop\MindMap_V1_final\Mind-Map\MindMap\MindMapApi.Models\obj\Debug\MindMapApi.Models.csproj.CoreCompileInputs.cache
+C:\Users\Dragon_DJ\Desktop\MindMap_V1_final\Mind-Map\MindMap\MindMapApi.Models\obj\Debug\MindMapApi.Models.csproj.CopyComplete
+C:\Users\Dragon_DJ\Desktop\MindMap_V1_final\Mind-Map\MindMap\MindMapApi.Models\obj\Debug\MindMapApi.Models.dll
+C:\Users\Dragon_DJ\Desktop\MindMap_V1_final\Mind-Map\MindMap\MindMapApi.Models\obj\Debug\MindMapApi.Models.pdb

@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace MindMapApi.Controllers
@@ -18,7 +19,6 @@ namespace MindMapApi.Controllers
     [ApiController]
     public class FileController : ControllerBase
     {
-        private int count = 0;
         private readonly FilesBll filesBll;
 
         public FileController(FilesBll filesBll)
@@ -30,14 +30,19 @@ namespace MindMapApi.Controllers
         [HttpGet]
         public List<UsersFiles> GetFileByPath(string username, string filepath)
         {
-            return filesBll.GetAllByPath(filepath).FindAll(files => files.username == username);
+            var res = filesBll.GetAllByPath(filepath).FindAll(files => files.username == username);
+            return res;
         }
 
          // 根据文件名搜索文件
         [HttpGet]
-        public List<UsersFiles> GetFilesByName(string username, string filename)
+        public string GetFileByName(string username, string filename, string filepath)
         {
-            return filesBll.GetByFileName(filename).FindAll(files => files.username == username);
+            //return filesBll.GetByFileName(filename).FindAll(files => files.username == username);
+            string path = "D:\\Data\\" + username + "\\" + filepath + "\\" + filename + ".jm";
+            byte[] buffer = System.IO.File.ReadAllBytes(path);
+            string s = Encoding.UTF8.GetString(buffer);
+            return s;
         }
 
         // 获得该用户的所有文件
@@ -45,6 +50,28 @@ namespace MindMapApi.Controllers
         public List<UsersFiles> GetAllFiles(string userName)
         {
             return filesBll.GetAllByUserName(userName);
+        }
+
+        [HttpGet]
+        public string GetAllFolders(string userName)
+        {
+            var data = filesBll.GetAllByUserName(userName);
+            string res = "";
+            for (int i = 0; i < data.Count; i++)
+                if (data[i].filepath == "/")
+                    res += data[i].filename + " ";
+            return res;
+        }
+
+        [HttpGet]
+        public string GetAllFile(string userName, string pathname)
+        {
+            var data = filesBll.GetAllByUserName(userName);
+            string res = "";
+            for (int i = 0; i < data.Count; i++)
+                if (data[i].filepath != "/" && data[i].filepath == pathname)
+                    res += data[i].filename + " ";
+            return res;
         }
 
         // 创建新文件，同目录下文件名不允许相同,文件默认不可共享
@@ -69,7 +96,13 @@ namespace MindMapApi.Controllers
                 type = type,
                 tag = tag,
                 createdate = DateTime.Now
-            }) ;
+            });
+            string sPath = "D:\\Data\\";
+            if (type)
+            {
+                if (!Directory.Exists(sPath + username + "\\" + filename))
+                    Directory.CreateDirectory(sPath + username + "\\" + filename);//创建路径
+            }
             return "success";
         }
 
@@ -77,8 +110,11 @@ namespace MindMapApi.Controllers
         [HttpPost]
         public string SaveFile(dynamic Json) // 1是文件，0是文件夹 
         {
-            string SavePath = "D:\\Data\\" + count ++ + ".jm";
-            string data = Json + "";
+            string data = Json.data;
+            string filename = Json.filename;
+            string foldername = Json.foldername;
+            string username = Json.username;
+            string SavePath = "D:\\Data\\" + username + "\\" + foldername + "\\" + filename + ".jm";
             FileInfo fileInfo = new FileInfo(SavePath);
             StreamWriter streamWriter = new StreamWriter(SavePath);
             if (!fileInfo.Exists)

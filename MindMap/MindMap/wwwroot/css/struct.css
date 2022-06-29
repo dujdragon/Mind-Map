@@ -5,14 +5,62 @@
 html,body{
     height: 100%;
 }
+
+.toolbar {
+    position: relative;
+    left: 10%;
+    width: 90%;
+    height: 5%;
+}
+.toolbar h3 {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    margin: auto, auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    user-select:none;
+    border-radius: 10px;
+}
+.toolbar a {
+    position: absolute;
+    left: 95%;
+    top: 40%;
+    margin: auto, auto;
+    
+}
+.toolbar #toolbar_edit {
+    left:45%;
+}
+.toolbar #toolbar_username {
+    left:85%;
+}
+.toolbar #toolbar_help {
+    left:55%;
+}
+
+.toolbar #btn_test {
+    left:20%;
+}
+
+#dialog_help li {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
 .wrap{
     position: absolute;
+    top: 0;
     width: 10%;
     min-width:100px;
     height: 100%;
     background-color: #363a45;
 }
-.header{
+.wrap .header{
     width: 100%;
     height: 65px;
     background-color: #44495a;
@@ -21,25 +69,28 @@ html,body{
     text-align: center;
     line-height: 65px;
 }
-.header span {
+.wrap .header span {
     text-align: center;
+    user-select:none;
 }
-.header img{
+.wrap .header img{
     display: inline;
     float: right;
     margin-top: 17px;
     margin-right: 15px;
     cursor: pointer;
 }
-.btn_file {
-    height: 30px;
+.wrap .btn_file {
     width: 100%;
+    height: 30px;
 }
-.btn_file button {
-    margin-top: 5px;
-    font-size: 18px;
+.wrap .btn_file button {
+    position: relative;
+    margin: 5px, 5px 0;
+    padding: auto;
+    font-size: 15px;
     color: #fff;
-    background-color: rgb(29, 203, 216);
+    background-color: #3889d4;
     text-align: center;
     width: 50%;
     height: 30px;
@@ -61,15 +112,15 @@ html,body{
     left: -100px;
     top: 20px;
 }
-.nav{
+.nav {
     width:90%;
     margin: 10px 5px 0;
 }
-.list{
+.nav .list {
     margin-bottom: 5px;
     cursor: pointer;
 }
-.list h2{
+.nav .list h2 {
     position: relative;
     padding: 15px 0;
     background-color: #3889d4;
@@ -77,11 +128,12 @@ html,body{
     font-size: 16px;
     color: #fff;
     transition: .5s;
+    user-select:none;
 }
-.list h2.on{
+.nav .list h2.on {
     background-color: #393c4a;
 }
-.list i{
+.nav .list i {
     position: absolute;
     right: 10px;
     top: 16px;
@@ -91,25 +143,82 @@ html,body{
     transform-origin: 1px 8px;
     transition: .5s;
 }
-.list i.on{
+.nav .list i.on {
     transform:rotate(90deg);
 }
-.hide{
+.nav .hide {
     overflow: hidden;
     height: 0;
     transition: .5s;
 }
-.hide h5{
+.nav .hide h5 {
     padding: 10px 0;
     background-color: #282c3a;
     text-align: center;
     color:#fff;
     border-bottom:#42495d;
+    user-select:none;
 }
 
 .MindMap {
     position: relative;
     left: 10%;
     width: 90%;
-    height: 100%;
+    height: 95%;
+}
+.page_open {
+    position: absolute;
+    top:5%;
+    left: 60%;
+    display: none;
+    width: 45%;
+    height: 95%;
+}
+.ui-dialog-titlebar-close {
+    visibility: hidden;
+}
+
+.a-upload {
+    padding: 4px 10px;
+    margin: 5px;
+    margin-left: 50px;
+    text-align:center;
+    height: 20px;
+    width: 100px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #000;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    text-decoration: none;
+    *zoom: 1
+}
+
+.a-upload input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none
+}
+
+.a-upload:hover {
+    color: #ffffff;
+    background: #3889d4;
+    border-color: #3889d4;
+    text-decoration: none
+}
+.MindMap select {
+    margin-left:50px;
 }

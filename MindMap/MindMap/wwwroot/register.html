@@ -68,11 +68,18 @@
                             if (data == "existed") {
                                 $('#msg').text("用户名已经存在！");
                             } else {
+                                // Success: 在后端创建对应的用户文件夹
                                 $('#msg').text("注册成功！");
                             }
                         }
                     }
                 });
+            }
+        });
+        $(document).keydown(function (e) {
+            var eCode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
+            if (eCode == 13) {
+                $("#register").click();
             }
         });
     });

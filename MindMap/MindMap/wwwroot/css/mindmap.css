@@ -1,0 +1,53 @@
+.MindMap {
+    width: 90%;
+}
+.MindMap li {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.MindMap button {
+    width: 140px;
+}
+
+.MindMap select {
+    width: 140px;
+}
+
+.MindMap #layout {
+    width: 1230px;
+}
+
+.MindMap #jsmind_nav {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    border: solid 1px #ccc;
+    overflow: auto;
+    float: left;
+}
+
+.MindMap .file_input {
+    width: 100px;
+}
+
+.MindMap button.sub {
+    width: 100px;
+}
+
+.MindMap #jsmind_container {
+    float: left;
+    width: 90%;
+    height: 100%;
+    border: solid 1px #ccc;
+    background: #f4f4f4;
+}
+.MindMap #jsmind_container .jsmind-inner{
+    position:absolute;
+    left: 10%;
+    float: left;
+    width: 100%;
+    height: 100%;
+    border: solid 1px #ccc;
+    background: #f4f4f4;
+}

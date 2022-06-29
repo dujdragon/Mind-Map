@@ -3649,24 +3649,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\20205\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Dragon_DJ\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj",
+      "projectUniqueName": "C:\\Users\\Dragon_DJ\\Desktop\\MindMap_V1_final\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj",
       "projectName": "MindMapApi",
-      "projectPath": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj",
-      "packagesPath": "C:\\Users\\20205\\.nuget\\packages\\",
-      "outputPath": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMap\\obj\\",
+      "projectPath": "C:\\Users\\Dragon_DJ\\Desktop\\MindMap_V1_final\\Mind-Map\\MindMap\\MindMap\\MindMapApi.csproj",
+      "packagesPath": "C:\\Users\\Dragon_DJ\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dragon_DJ\\Desktop\\MindMap_V1_final\\Mind-Map\\MindMap\\MindMap\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\20205\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Dragon_DJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3680,11 +3675,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj": {
-              "projectPath": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj"
+            "C:\\Users\\Dragon_DJ\\Desktop\\MindMap_V1_final\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj": {
+              "projectPath": "C:\\Users\\Dragon_DJ\\Desktop\\MindMap_V1_final\\Mind-Map\\MindMap\\MindMapApi.Bll\\MindMapApi.Bll.csproj"
             },
-            "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj": {
-              "projectPath": "E:\\Mind-Map\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj"
+            "C:\\Users\\Dragon_DJ\\Desktop\\MindMap_V1_final\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj": {
+              "projectPath": "C:\\Users\\Dragon_DJ\\Desktop\\MindMap_V1_final\\Mind-Map\\MindMap\\MindMapApi.Models\\MindMapApi.Models.csproj"
             }
           }
         }
@@ -3746,7 +3741,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

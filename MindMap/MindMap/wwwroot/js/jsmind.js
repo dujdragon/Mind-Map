@@ -483,7 +483,7 @@
                     "version": __version__
                 },
                 "format": "node_tree",
-                "data": { "id": "root", "topic": "jsMind Example" }
+                "data": { "id": "root", "topic": "NewNode" }
             },
             get_mind: function (source) {
                 var df = jm.format.node_tree;
@@ -583,7 +583,7 @@
                 },
                 "format": "node_array",
                 "data": [
-                    { "id": "root", "topic": "jsMind Example", "isroot": true }
+                    { "id": "root", "topic": "NewNode", "isroot": true }
                 ]
             },
 
@@ -2919,14 +2919,14 @@
                 this._mapping[kc].call(this, this.jm, e);
             }
         },
-
+ 
         handle_addchild: function (_jm, e) {
             var selected_node = _jm.get_selected_node();
             if (!!selected_node) {
                 var nodeid = this._newid();
-                var node = _jm.add_node(selected_node, nodeid, 'New Node');
+                var node = _jm.add_node(selected_node, nodeid, "NewNode");
                 if (!!node) {
-                    _jm.select_node(nodeid);
+                    _jm.select_node(nodeid);        
                     _jm.begin_edit(nodeid);
                 }
             }
@@ -2935,7 +2935,7 @@
             var selected_node = _jm.get_selected_node();
             if (!!selected_node && !selected_node.isroot) {
                 var nodeid = this._newid();
-                var node = _jm.insert_node_after(selected_node, nodeid, 'New Node');
+                var node = _jm.insert_node_after(selected_node, nodeid, "NewNode");
                 if (!!node) {
                     _jm.select_node(nodeid);
                     _jm.begin_edit(nodeid);
